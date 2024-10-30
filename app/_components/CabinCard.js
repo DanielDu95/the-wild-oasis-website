@@ -1,5 +1,7 @@
 import { UsersIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import about from "@/public/about-2.jpg";
+import bg from "@/public/bg.png";
 
 function CabinCard({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
@@ -9,10 +11,20 @@ function CabinCard({ cabin }) {
       <div className="flex-1">
         <Image
           src={image}
-          fill
+          // src={about}
+          width={500}
+          height={500}
           alt={`Cabin ${name}`}
           className="object-cover border-r border-primary-800"
         />
+        {/* <Image
+          src="https://fspzefwmxaamabhwvjms.supabase.co/storage/v1/object/public/cabin-images/cabin-008.jpg"
+          fill
+          // placeholder="blur"
+          quality={80}
+          className="object-cover object-top"
+          alt="Mountains and forests with two cabins"
+        /> */}
       </div>
       <div className="flex-grow">
         <div className="pt-5 pb-4 px-7 bg-primary-950">
